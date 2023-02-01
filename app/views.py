@@ -28,6 +28,7 @@ def form_page(request):
         save = Infoss.objects.create(name=name, address=address, description=description, image=image)
         save.save()
         return HttpResponseRedirect('/')
+        print("FUCK")
     return render (request, 'create.html')
 
 def update_form(request, id):
